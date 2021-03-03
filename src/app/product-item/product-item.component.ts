@@ -9,6 +9,9 @@ export interface Product {
   image: string;
   rating: number;
   link: string;
+  numberLike: number;
+  numberDislike:number;
+  
 }
 @Component({
   selector: 'app-product-item',

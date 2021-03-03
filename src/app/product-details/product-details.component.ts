@@ -12,6 +12,7 @@ import { CartService } from '../cart.service';
 })
 export class ProductDetailsComponent implements OnInit {
   product;
+
   constructor(
     private route: ActivatedRoute,
     private cartService: CartService
@@ -30,6 +31,11 @@ export class ProductDetailsComponent implements OnInit {
 
   // Find the product that correspond with the id provided in route.
   this.product = products.find(product => product.id === productIdFromRoute);
+  }
+  removeButton(product){
+    const index: number = this.product.indexOf(product);
+    product.splice(index, 1);
+    // this.products = this.products.filter(item => item.id !== id);
   }
 
 }

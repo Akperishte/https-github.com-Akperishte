@@ -9,16 +9,15 @@
         {{ product.name }}
       </a>
     </h3>
+    <!-- Product price -->
       <div id = "rating-price">
     <p *ngIf="product.price" class="product-details__price">
       {{ product.price}}
     </p>
+    
+    
 
-    <p *ngIf="product.rating">
-      Rating: {{ product.rating }}
-    </p>
-      </div>
-
+     <!-- Product description -->
       <p id = "des" *ngIf="product.description">
         {{ product.description }}
       </p>

@@ -3,11 +3,12 @@
 <div *ngFor="let product of products">
 	<h3>
 		<a [title]="product.name + ' details'" [routerLink]="['/products', product.id]">
-			{{ product.name }}
+			{{product.name }}
 		</a>
 	</h3>
   
   <img *ngIf="product.image" [src]="product.image" width="400px" />
+
   <p *ngIf="product.description">
     Description: {{ product.description }}
   </p>

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
@@ -13,12 +14,16 @@ import { CartComponent } from './cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShippingComponent } from './shipping/shipping.component';
 import { ProductItemComponent } from './product-item/product-item.component';
+import { CategoryComponent } from './category/category.component';
+import { LikesComponent } from './likes/likes.component';
+
 
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpClientModule,
+    AppRoutingModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
@@ -26,7 +31,7 @@ import { ProductItemComponent } from './product-item/product-item.component';
      ProductDetailsComponent },
       { path: 'cart', component: CartComponent },
       { path: 'shipping', component: ShippingComponent },
-
+     
     ])
   ],
   declarations: [
@@ -38,12 +43,17 @@ import { ProductItemComponent } from './product-item/product-item.component';
     CartComponent,
     ShippingComponent,
     ProductItemComponent,
+    LikesComponent,
+    CategoryComponent,
     
   ],
+  
+
+
   bootstrap: [
     AppComponent
   ],
-  providers: [CartService]
+  providers: []
 })
 export class AppModule { }
 
